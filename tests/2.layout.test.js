@@ -21,7 +21,7 @@ describe(`html content`, function () {
   });
 
   test(`body includes a jumbotron div with an h1`, function() {
-    const jumbotron = document.querySelector(`body > .jumbotron`);
+    const jumbotron = document.querySelector(`body > header > .jumbotron`);
     const jumbotronH1 = jumbotron.querySelector(`h1`);
 
     expect(jumbotron).toBeTruthy();
@@ -30,7 +30,7 @@ describe(`html content`, function () {
   });
 
   test(`jumbotron div includes input field for the name`, function() {
-    const jumbotron = document.querySelector(`body > .jumbotron`);
+    const jumbotron = document.querySelector(`body > header > .jumbotron`);
     const outerDiv = jumbotron.querySelector(`div`);
     const input = jumbotron.querySelector(`input`);
     const innerDiv = outerDiv.querySelector(`div`);
