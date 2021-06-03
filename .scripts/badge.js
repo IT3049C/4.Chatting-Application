@@ -5,7 +5,7 @@ async function main(){
   const remote = await git.getRemotes(true);
   const originRemote = remote.filter(r => r.name === `origin`)[0].refs.fetch.substring(4).slice(0,-4).replace(`:`,`/`);
 
-  const result = `![Assignment Checks](https://${originRemote}/workflows/Assignment%20Checks/badge.svg)`;
+  const result = `[![Assignment Checks](https://${originRemote}/actions/workflows/classroom.yml/badge.svg)](https://${originRemote}/actions/workflows/classroom.yml)`;
 
   lineReplace({
     file: `README.md`,
