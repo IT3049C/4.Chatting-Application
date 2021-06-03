@@ -39,7 +39,7 @@ describe(`html content`, function () {
 
     expect(outerDiv).toHaveClass(`input-group mb-3`);
     expect(input).toHaveClass(`form-control`);
-    expect(input).toHaveAttribute(`id`, `myName`);
+    expect(input).toHaveAttribute(`id`, `my-name-input`);
     expect(innerDiv).toHaveClass(`input-group-prepend`);
     expect(innerDivSpan).toHaveClass(`input-group-text`);
     expect(innerDivSpanI).toHaveClass(`fas fa-user`);
