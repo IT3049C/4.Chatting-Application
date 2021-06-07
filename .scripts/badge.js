@@ -3,9 +3,14 @@ const lineReplace = require(`line-replace`);
 
 async function main(){
   const remote = await git.getRemotes(true);
-  const originRemote = remote.filter(r => r.name === `origin`)[0].refs.fetch.substring(4).slice(0,-4).replace(`:`,`/`);
+  let originRemote = remote.filter(r => r.name === `origin`)[0].refs.fetch
+  if(originRemote.startsWith(`git`)){
+    originRemote = `https://${originRemote.substring(4).slice(0,-4).replace(`:`,`/`)}`;
+  } else if (originRemote.startsWith(`https`)) {
+    originRemote = originRemote.slice(0, -4);
+  }
 
-  const result = `[![Assignment Checks](https://${originRemote}/actions/workflows/classroom.yml/badge.svg)](https://${originRemote}/actions/workflows/classroom.yml)`;
+  const result = `[![Assignment Checks](${originRemote}/actions/workflows/classroom.yml/badge.svg)](${originRemote}/actions/workflows/classroom.yml)`;
 
   lineReplace({
     file: `README.md`,
