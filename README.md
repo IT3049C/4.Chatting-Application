@@ -1,11 +1,8 @@
 Chatting Application
 =====================
-[![Assignment Checks](https://github.com/IT3049C/4.Chatting-Application/actions/workflows/classroom.yml/badge.svg)](https://github.com/IT3049C/4.Chatting-Application/actions/workflows/classroom.yml)
-
-Instructions to this assignment can be found [here](#).
+Instructions to this assignment can be found [here](https://it3049c.github.io/docs/labs/we-message).
 
 ## Checklist:
-- [x] update the assignment checks above to the correct link. - Done Automatically
 - [ ] make sure the assignment checks pass
 - [ ] fill out the self evaluation and Reflection
 - [ ] submit the repository link on Canvas
