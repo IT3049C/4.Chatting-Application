@@ -1,6 +1,6 @@
 Chatting Application
 =====================
-Instructions to this assignment can be found [here](https://it3049c.github.io/docs/labs/we-message).
+Instructions to this assignment can be found [here](https://it3049c.github.io/coursework/labs/chatting-app).
 
 ## Checklist:
 - [ ] make sure the assignment checks pass
