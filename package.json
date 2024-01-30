@@ -4,10 +4,10 @@
   "description": "",
   "scripts": {
     "start": "http-server -c-1",
-    "test": "npm run test:unit && npm run test:e2e",
-    "test:unit": "jest",
+    "test": "npm run test:e2e",
+    "test:structure": "jest",
     "test:e2e": "npx playwright test",
-    "test:watch": "jest --watchAll"
+    "test:unit:watch": "jest --watchAll"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
