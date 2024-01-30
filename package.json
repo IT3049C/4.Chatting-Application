@@ -7,7 +7,9 @@
     "test": "npm run test:e2e",
     "test:structure": "jest",
     "test:e2e": "npx playwright test",
-    "test:unit:watch": "jest --watchAll"
+    "test:layout": "npx playwright test 2.layout.spec.ts",
+    "test:controller": "npx playwright test 3.controller.spec.ts",
+    "postinstall": "npx playwright install --with-deps"
   },
   "author": "Yahya Gilany <gilanyym@ucmail.uc.edu>",
   "license": "UNLICENSED",
