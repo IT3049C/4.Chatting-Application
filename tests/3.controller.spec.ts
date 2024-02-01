@@ -55,11 +55,17 @@ test.describe(`Controller`, () => {
 
     const requestPromise = page.waitForResponse(`**/messages`);
     const messagesDiv = await page.locator(`#chat`);
-    await requestPromise;
-    // await expect((await requestPromise).request().postData()).toEqual({
-    //   sender: testerName,
-    //   text: randomMessage
-    // });
+    // wait for the request to be fulfilled
+    (await requestPromise).finished();
+
+    // if the request is a POST, check the postData
+    if((await requestPromise).request().method() === "POST") {
+      await expect((await requestPromise).request().postData()).toEqual({
+        sender: testerName,
+        text: randomMessage
+      });
+    }
+
     await expect(messagesDiv).toContainText(randomMessage);
   });
 });
